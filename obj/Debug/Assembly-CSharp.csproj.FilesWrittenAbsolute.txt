@@ -1,0 +1,14 @@
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/UnityEngine.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/UnityEditor.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/DOTween.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/Mono.Cecil.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/Unity.DataContract.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/Egor/Documents/TestGame/Temp/bin/Debug/Mono.Cecil.Mdb.dll

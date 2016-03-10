@@ -1,0 +1,43 @@
+key	RU	EN	IT	ES	PO	JP	CN	DE	FR	KR	BR	PL	TW
+play	ИГРАТЬ	PLAY	Gioca	Jugar	Jogar	プレイ	玩	Spielen	Jouer	플레이	Jogar	Grać	玩
+finish	Игра завершена!	Game over!	Fine del Gioco!	¡Fin del Juego!	Fim do Jogo!	ゲームオーバー！	游戏結束了！	Das Spiel ist beendet!	Fin du Jeu!	게임 오버	Fim do Jogo!	Skończyć	遊戲完成了
+win	Уровень пройден!	Level completed!	Livello completato	Nivel completado	Level completado	レベルコンプリートした！	級別完成！	Niveau abgeschlossen!	Ce niveau est achevé	레벨 완료	Level completado	Zwyciężyć	你贏了
+lose	Уровень проигран!	Level failed!	Hai perso	Perdiste	Você perdeu	レベルフェイルした！	級別失敗！	Niveau fehlgeschlagen!	Vous n'avez pas \n achevé ce niveau	레벨 실패	Você perdeu	Stracić	你輸了
+loading	Загрузка...	Loading...	Caricamento...	Cargando ...	Carregando ...	読み込んでいます...	加載中...	Verladung...	Chargement	로드	Carregando ...	Ładowanie	在加載
+tutorial	tutorial_ru	tutorial_en	tutorial	tutorial	tutorial	チュートリアル	教程	Lernprogramme	Instruction	훈시	tutorial	Program uczący	教程
+score	Лучший результат	High scores	Punteggi	Resultados	Pontuações	ハイスコア	高分	Das beste Ergebnis	Les meilleurs comptes	최고 점수	Pontuações	Oznaczenie	得分
+shop	МАГАЗИН	SHOP	Negozio	Tienda	Loja	ショップ	鋪	Geschäft	Magasin	가게	Loja	Sklep	店
+buy	КУПИТЬ	BUY	Compra	Comprar	Comprar	買う	購買	Kaufen	Acheter	사다	Comprar	Kupić	購買
+setting	Настройки	Settings	Opzioni	Opciones	Opções	設定	设置	Einstellungen	Alignement	설정	Opções	Uregulowanie	環境
+pause	Пауза	Pause	Pausa	Pausa	Pausa	ポーズ	暫停	Pause	Pause	중지	Pausa	Pauza	暫停
+exit?	Выйти?	Are you sure you want to quit?	Uscire?	Salir?	Sair?	終了してもよろしいですか？	您確定要退出嗎？	Sind Sie sicher dass Sie beenden möchten?	Vous êtes sur que vous voulez sortit du jeu?	게임을 종료?	Sair?	Wyjść?	退出
+invertAccelerometer	Инвертировать управление	Invert controls	Invertire I controlli	Invertir controles	Inverter controles	加速度計を反転する	反轉控制	Steuerung invertieren	Inversion des contrôles	제어를 반전	Inverter controles	Strata kontroli	反轉控制
+tap	Жми!	Tap!	Tocca!	Pulsa!	Tap!	タップする !	点击 !	Tap!	Tape!	푸시!	Tap!	Stuknąć	龍頭
+toshop	В магазин!	It’s time to go shopping!	È il momento di fare shopping!	¡Es la hora de ir de compras!	É hora de fazer compras!	これは、買い物に行く時間だ！	这是去逛街的时间！	Es ist Zeit	Shoppen zu gehen! Il est temps d'aller faire du shopping!	쇼핑 하십시오!	É hora de fazer compras!	Idź do sklepu!	到店
+saved	Сохранено	Saved	Savato	Guardado	Guardado	保存した	保存了	Gespeichert	Enregistré	저장된	Guardado	Zachowane	保存
+easy	лёгкий	easy	facile	fácil	łatwy	初級	简单	leicht	facile	초급	łatwy	Łatwy	簡單
+normal	средний	normal	medio	medio	średni	中級	正常	mittel	moyen	중급	średni	Średni	正常
+hard	тяжёлый	hard	difficile	difícil	ciężki	上級	困难	schwer	difficile	고급	ciężki	Ciężki	困難
+goal	Гол!	It's a goal!	Gol!	¡Gol!	Golo!	アウト	进球得分	Tor!	Le but marqué!	골	Golo!	Cel	目標
+out	Аут!	Ball out of play!	Fuori!	¡Fuera!	Fora!	ゴール	出界	Aus!	Out!	아웃	Fora!	Aut	滿分
+health	Здоровье	Heatlh	salute 	Salud	saúde 	健康	健康	Gesundheitszustand	Santé	건강 	saúde 	Zdrowie	健康
+attack	Атака	Attack	attacco 	Ataque	ataque 	攻撃	攻击	Angriff	Attaque	공격 	ataque 	Napaść	攻擊
+defence	Защита	Defence	difesa	Defensa	defesa	防衛	防御	Abwehr	Défense	방어	defesa	Obrona	防禦
+showtutorial	Показать обучение?	Show Tutorial?	Mostrare Il Lezione	?Ense?ar el juego tutorial?	Mostrar O Tutorial	チュートリアルを見たい？	秀教程	Zeigen das Tutorial an?	Montrer le tutoriel?	자습서 보여주세요	Mostrar O Tutorial	Pokaż Grę Kształtującą?	展示輔導課
+endless	Бесконечная игра	Endless game	Gioco Infinite	Juego infinito	O jogo infinito	エンドレスゲーム	无尽模式	Unendliches Spiel	Jeu infini	끝없는 게임	O jogo infinito	Niekończąca się gra	無盡模式
+curscore	Текущий результат	Score	Punteggio	Puntos	Puntos	 ポイント	当前的结果	Punktzahl	Points	점수	Puntos	Terazniejszy rezultat	當前的結果
+title	Dino Assassin	Dino Assassin	Dino Assassino	Dino Assassino	Dino Atacando	恐竜のバトル	恐龙凶手	Dino Killer	Dinosaure Assassin	디노 암살자	Dino Atacando	Dinozaur Zabójca	恐龙凶手
+tutorial1	Поворачивай телефон\nвлево-вправо, чтобы бежать	Tilt the phone\nleft and right to run	Inclina il telefono\na destra e a sinistra a correre	Inclina el celular\na la derecha y izguierda para correr	Incline o telefone\na esquerda ea direita para correr	携帯電話を右と左へ傾けて、走る	倾斜你的手机来控制角色	Kippe dein Handy\nnach links und rechts, um zu rennen	Incline l'appareil vers la droite\nou vers la gauche pour marcher	달려가기 위해서 휴대폰을 좌우로 기울어 보세요	Incline o telefone\na esquerda ea direita para correr	Nachylaj komórkę\nw lewo czy w prawo, żeby biec	倾斜你的手机来控制角色
+tutorial1desk	Используй клавиши\nвлево и вправо чтобы бежать	Use the buttons\n"left" and "right" to run	Usa i tasti\n"sinistra" e "destra" per correre	Toca los botones\n"derecha" y "izguierda" para correr	Use as teclas\n"esquerda" e "direita" para correr	「右」と「左」ボタンを使って、走る	用左箭头键和右箭头键来控制角色	Benutze die Links-\nund Rechts-Tasten, um zu rennen	Utilise les boutons\nde gauche et de droite pour marcher	달려가기 위해서 "왼쪽" 및 "오른쪽" 버튼을 사용하세요	Use as teclas\n"esquerda" e "direita" para correr	Korzystaj kławisze\nw lewo czy w prawo, żeby biec	用左箭头键和右箭头键来控制角色
+tutorial2	Нажми на экран, чтобы атаковать	Tap the screen to attack	Tocca lo schermo per attaccare	Toca la pantalla para ataque	Toque na tela para atacar	スクリーンをタップして攻撃する	点击屏幕来攻击	Tippe auf den Bildschirm, um anzugreifen	Tape sur l'écran pour attaquer	공격하도록 화면을 눌러 보세요	Toque na tela para atacar	Naciśnij na ekran, żeby atakować	点击屏幕来攻击
+tutorial2desk	Нажми пробел, чтобы атаковать	Tap the space to attack	Premi spazio per attaccare	Toca el espacio para ataque	Pressione espaço para atacar	スペースを押して、攻撃する	点击空格键来攻击	Drücke auf die Leertaste, um anzugreifen	Tape sur la barre d'espace pour attaquer	공격하도록 스페이스를 누르세요	Pressione espaço para atacar	Naciśnij przycisk "luka", żeby atakować	点击空格键来攻击
+tutorial3	Съешь их всех!	Eat them all!	Mangiali tutti!	¡Come-los todos!	comê-los todos!	それらすべてを食べよう！	把他们一切吃吧！	Iß sie alle auf!	Mange tout le monde!	그들 모두를 먹어 보세요!	comê-los todos!	Zjedz wszystkich!	把他们一切吃吧！
+speed	Speed	Speed	Veloce	Rápida	Rápida	スピード		速度		Tempo	Vitesse	속도	Rápida	速度
+congratulations	Поздравляем!	Congratulations!	Congratulazioni!	¡Felicitaciones!	Parabéns!	おめでとうございます！	恭喜！	Gratulation!	Félicitations!	축하합니다!
+color0	Красный	Red	Rosso	Rojo	Vermelho	赤色	红	Rot	Rouge	빨간색	Vermelho	Red	红
+color1	Оранжевый	Orange	Arancione	Naranja	Laranja	オレンジ色	橙	Orange	Orange	오렌지색	Laranja	Orange	橙
+color2	Желтый	Yellow	Giallo	Amarillo	Amarelo	黄色	黄	Gelb	Jaune	노란색	Amarelo	Yellow	黄
+color3	Зеленый	Green	Verde	Verde	Verde	緑色	绿	Grün	Vert	녹색	Verde	Green	绿
+color4	Голубой	Blue	Blu	Azul	Azul	ブルー色	青	Türkis	Bleu Ciel	파란색	Azul	Blue	青
+color5	Синий	Indigo	Indaco	Añil	Indigo	青色	蓝	Königsblau	Bleu	남색	Indigo	Indigo	蓝
+color6	Фиолетовый	Violet	Viola	Púrpura	Violeta	紫色	紫	Violett	Violet	보라색	Violeta	Violet	紫
