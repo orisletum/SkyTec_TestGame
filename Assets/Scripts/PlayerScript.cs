@@ -8,20 +8,11 @@ public class PlayerScript : MonoBehaviour {
 		LastXPos=transform.position.x;
 	}
 	public void MovePlayer(float dis){
+		if((dis<0 && LastXPos<-3) || (dis>0 && LastXPos>3))
+			dis*=-1;
 		LastXPos+=dis;
 		transform.DOMoveX(LastXPos,1);
 
 	}
-	// Update is called once per frame
-//	void FixedUpdate () {
-//		if (!MApplication.instance.pause){
-//			
-//			DistancePos=Mathf.Abs(LastXPos-Camera.main.ScreenToWorldPoint(Input.mousePosition).x);
-////			if(DistancePos>0.2f){
-//				LastXPos=Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-//				transform.DOMoveX(LastXPos,DistancePos/2f);
-//
-////			}
-//		}
-//	}
+
 }

@@ -186,7 +186,7 @@ public class Localization {
 		get {return _lang;}
 		set { 
 			_lang = value;
-			// TODO dispath event change
+
 		}
 		
 	}

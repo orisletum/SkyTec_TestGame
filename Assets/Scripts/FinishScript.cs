@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.Networking;
 public class FinishScript : MPopup 
 {
 
@@ -18,13 +18,17 @@ public class FinishScript : MPopup
 	public void ResumeBtnDown(){
 		Sound.play();
 		MApplication.instance.pause = false;
-		Application.LoadLevel("Game");
+		GameScript.instance.TypeBall();
+		this.gameObject.SetActive(false);
 	}
    	
 
      void OnBackClick()
     {
 		
-        Application.LoadLevel("Menu");
+		if(MApplication.instance.isServer) 
+			GameObject.Find("NetworkCommander").GetComponent<NetworkManager>().StopServer();
+		else
+			GameObject.Find("NetworkCommander").GetComponent<NetworkManager>().StopClient();
     }
 }

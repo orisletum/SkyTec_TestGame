@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
@@ -7,7 +8,7 @@ public class GameScript : MonoBehaviour
 {
 	public GameObject Player=null;
 
-	public bool isServer=false;
+	public bool isServer;
 	public int MaskField;
 	public string IPField;
 	public Text ScoreText=null;
@@ -31,16 +32,16 @@ public class GameScript : MonoBehaviour
 
 	void Start ()
 	{
-//		MenuUI.GetComponent<FinishScript>().IsHidden=false;
-//		pause.GetComponent<MPause>().IsHidden=false;
+
 		MApplication.instance.pause = false;
 		ScoreUp(0);
-		MaskField=MApplication.instance.MaskField;
-		IPField=MApplication.instance.IPField;
-		isServer=MApplication.instance.isServer;
-		if(isServer) CreateServer();
-		else 
-			ConnectServer();
+
+		if(!MApplication.instance.isServer) {
+			Destroy(CurBall,0);
+			GameObject.Find("LeftButton").SetActive(false);
+			GameObject.Find("RightButton").SetActive(false);
+		}
+
 	}
 	public void ScoreUp(int UpVal){
 		CurScore+=UpVal;
@@ -48,34 +49,7 @@ public class GameScript : MonoBehaviour
 		if(CurScore>(GameDifficulty*40+10) && GameDifficulty<3) GameDifficulty++;
 
 	}
-	void CreateServer(){
-		Network.InitializeServer(10, MaskField, false);
-	}
-	void ConnectServer(){
-		Network.Connect(IPField, MaskField);
-	}
-	void OnPlayerDisconnected (NetworkPlayer pl) {
-		Network.RemoveRPCs(pl);
-		Network.DestroyPlayerObjects(pl);
-	}
-	void OnSerializeNetworkView (BitStream stream, NetworkMessageInfo info) {
-		Vector3 syncPosition = Vector3.zero;
-		if (stream.isWriting) {
 
-			syncPosition = Player.transform.position;
-
-			stream.Serialize(ref syncPosition);
-
-
-
-
-		} else {
-			stream.Serialize(ref syncPosition);
-
-
-
-		}
-	}
 	void DefaultBalls ()
 	{
 
@@ -167,54 +141,24 @@ public class GameScript : MonoBehaviour
 
 	public void ExitGame ()
 	{
-		Application.LoadLevel ("Menu");
+		if(MApplication.instance.isServer) 
+		GameObject.Find("NetworkCommander").GetComponent<NetworkManager>().StopServer();
+		else
+		GameObject.Find("NetworkCommander").GetComponent<NetworkManager>().StopClient();
 	}
 
-	void showPause ()
-	{
-		if (MPause.shown || FinishScript.shown)
-			return;
-		GameObject p = Instantiate (MenuUI) as GameObject;
-		MPause c = p.GetComponent<MPause> ();
-	}
 
-	void showFinish (string text)
+
+
+	public void Complete ()
 	{
 		
-//        if (MFinish.shown || MPause.shown) return;
 		MenuUI.GetComponent<FinishScript> ().IsHidden = true;
 		Debug.Log ("123");
 		FinishScript c = MenuUI.GetComponent<FinishScript> ();
-		c.label.text = text;
+		c.label.text = Localization.getText ("lose");
 	}
 
-	public void Complete (bool complete, int stars)
-	{
-		showFinish (Localization.getText (complete ? "win" : "lose"));
-
-		if (complete) {
-			//Событие выигрыша этого уровня
-            
-			//GameObject.Find("win").GetComponent<MSound>().play();
-			MApplication.instance.profile.levels = MApplication.instance.currentLevel + 1;
-
-		} else {
-			//GameObject.Find("lose").GetComponent<MSound>().play();
-		
-
-//			if(MApplication.instance.profile.LvlCharacter>1) MApplication.instance.profile.LvlCharacter--;
-		}
-	}
-
-	void OnApplicationFocus (bool focusStatus)
-	{
-       
-		if (!focusStatus) {
-			#if !UNITY_EDITOR
-            showPause();
-			#endif
-		}
-	}
 
 	void Update ()
 	{
@@ -226,7 +170,7 @@ public class GameScript : MonoBehaviour
 	{
         
 		if (!MApplication.instance.pause)
-			showPause ();
+			Complete();
 	}
 
 }

@@ -33,37 +33,37 @@ public class BaseProfile
 		}
 	}
 	
-	public Color HairColor
-	{
-		get
-		{
-			if (!PlayerPrefs.HasKey("HairColorR"))
-			{
-				PlayerPrefs.SetFloat("HairColorR",  1);
-				save ();
-			}
-			if (!PlayerPrefs.HasKey("HairColorG"))
-			{
-				PlayerPrefs.SetFloat("HairColorG",  1);
-				save ();
-			}
-			if (!PlayerPrefs.HasKey("HairColorB"))
-			{
-				PlayerPrefs.SetFloat("HairColorB",  1);
-				save ();
-			}
-			return new Color(PlayerPrefs.GetFloat("HairColorR"),
-			                 PlayerPrefs.GetFloat("HairColorG"),
-			                  PlayerPrefs.GetFloat("HairColorB"),1);
-		}
-		set
-		{
-			PlayerPrefs.SetFloat("HairColorR", value.r);
-			PlayerPrefs.SetFloat("HairColorG", value.g);
-			PlayerPrefs.SetFloat("HairColorB",value.b);
-			save ();
-		}
-	}
+//	public Color HairColor
+//	{
+//		get
+//		{
+//			if (!PlayerPrefs.HasKey("HairColorR"))
+//			{
+//				PlayerPrefs.SetFloat("HairColorR",  1);
+//				save ();
+//			}
+//			if (!PlayerPrefs.HasKey("HairColorG"))
+//			{
+//				PlayerPrefs.SetFloat("HairColorG",  1);
+//				save ();
+//			}
+//			if (!PlayerPrefs.HasKey("HairColorB"))
+//			{
+//				PlayerPrefs.SetFloat("HairColorB",  1);
+//				save ();
+//			}
+//			return new Color(PlayerPrefs.GetFloat("HairColorR"),
+//			                 PlayerPrefs.GetFloat("HairColorG"),
+//			                  PlayerPrefs.GetFloat("HairColorB"),1);
+//		}
+//		set
+//		{
+//			PlayerPrefs.SetFloat("HairColorR", value.r);
+//			PlayerPrefs.SetFloat("HairColorG", value.g);
+//			PlayerPrefs.SetFloat("HairColorB",value.b);
+//			save ();
+//		}
+//	}
 
 	
 	
@@ -237,150 +237,7 @@ public class BaseProfile
             }
         }
     }
-	/**
-	 * Уровни
-	 */
-	/*
-	public var levels(get_levels, null):Array<Int>;
-	function get_levels ():Array<Int>
-	{
-		if (_so.data.levels == null)
-		{
-			_so.data.levels = new Array<Int>();
-			_so.data.levels.push(1);
-			save();
-		}
-		return _so.data.levels;
-	}
-	*/
-	
-	/**
-	 * Добавить пройеднный уровень к списку
-	 * @param	level - номер уровня
-	 */
-	/*
-	public function addLevel (level:Int):Void
-	{
-		if (Utils.indexOf(levels, level) == -1)
-		{
-			_so.data.levels.push(level);
-			
-			save();
-		}
-	}
-	*/
-	
-	/**
-	 * Сохранить количество звёзд за уровень
-	 * @param	level - номер уровня
-	 * @param	stars - количество звезд: -1 звезды не используются, 0 - не пройден, 1,2,3 - пройден
-	 */
-	/*
-	public function setStars(level:Int, stars:Int = -1):Void
-	{
-		if (_so.data.stars == null)
-		{
-			_so.data.stars = new Array<Int>();
-			var l:Int = maxLevels + 1;
-			for (i in 0...l) {
-				_so.data.stars.push(0);
-			}
-		}
-		if (stars > _so.data.stars[level]) _so.data.stars[level] = stars;
-		save();
-	}
-	public var stars(get_stars, null):Array<Int>;
-	function get_stars ():Array<Int>
-	{
-		if (_so.data.stars == null)
-		{
-			_so.data.stars = new Array<Int>();
-			var l:Int = maxLevels + 1;
-			for (i in 0...l) {
-				_so.data.stars.push(0);
-			}
-			//_so.data.stars[1] = 0;
-			save();
-		}
-		return _so.data.stars;
-	}
-	
-	/**
-	 * Инвентарь
-	 */
-	/*
-	public var items(get_items, null):Array<Int>;
-	function get_items ():Array<Int>
-	{
-		if (_so.data.items == null)
-		{
-			_so.data.items = new Array<Int>();
-			save();
-		}
-		return _so.data.items;
-	}
-	
-	function get_invertAccelerometer():Bool 
-	{
-		if (_so.data.invertAccelerometer == null) _so.data.invertAccelerometer = false;
-		return _so.data.invertAccelerometer;
-	}
-	
-	function set_invertAccelerometer(value:Bool):Bool 
-	{
-		_so.data.invertAccelerometer = value;
-		save();
-		return value;
-	}
-	
-	/**
-	 * Инвертировать управление акселерометром
-	 */
-	/*
-	public var invertAccelerometer(get_invertAccelerometer, set_invertAccelerometer):Bool;
-	
-	function get_tutorials():Array<String> 
-	{
-		if (_so.data.tutorials == null) {
-			_so.data.tutorials = new Array<String> ();
-		}
-		return _so.data.tutorials;
-	}
-	/**
-	 * Список имен завершенных туториалов
-	 */
-	//public var tutorials(get_tutorials, null):Array<String>;
-	/**
-	 * Сохранить шаг туториала
-	 * @param	id - имя туториала
-	 */
-	/*
-	public function saveTutorial(id:String):Void {
-		if (Utils.indexOf(tutorials, id) < 0) {
-			_so.data.tutorials.push(id);
-			save();
-		}
-	}
-	/**
-	 * Сброс всех сохранений туториала
-	 */
-	/*
-	public function resetTutorial():Void {
-		_so.data.tutorials = new Array<String> ();
-		save();
-	}
-	/**
-	 * Добавить предмет в инвентарь
-	 * @param	itemId идентификатор товара в магазине
-	 */
-	/*
-	public function addItem (itemId:Int):Void
-	{
-		if (items[itemId] > 0) items[itemId]++;
-		else items[itemId] = 1;
-		save();
-	}
-	
+
 	/**
 	 * Сохранить данные
 	 */

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using DG.Tweening;
+
 public class BallScript : MonoBehaviour
 {
 	public int BallType = 1;
@@ -9,20 +10,20 @@ public class BallScript : MonoBehaviour
 	{
 		if (kk.gameObject.name == "player")
 			GameScript.instance.TypeBall ();
-		else if (kk.gameObject.name == "GameOver")
-			GameScript.instance.Complete (false, 0);
+		else if (kk.gameObject.name == "GameOver") {
+			Destroy(this.gameObject.GetComponent<CircleCollider2D>(),0);
+			GameScript.instance.Complete ();
+		}
 	}
 
 
 	public void MoveXAgain ()
 	{
-		
 		transform.DOMoveX (transform.position.x + Random.Range (-0.5f, 0.5f), 0.2f).OnComplete (MoveYAgain);
 	}
 
 	public void MoveYAgain ()
 	{
-		
 		transform.DOMoveY (transform.position.y - Random.Range (1f, 2f), 0.4f).OnComplete (MoveXAgain);
 	}
 
@@ -30,7 +31,7 @@ public class BallScript : MonoBehaviour
 	{
 		GetComponent<SpriteRenderer> ().material.DOFade (val, 1f).OnComplete (
 			delegate {
-				AlphaChangerAgain ((val ==  0.5f) ? 1 : 0.5f);
+				AlphaChangerAgain ((val == 0.5f) ? 1 : 0.5f);
 			}
 		);
 	}
@@ -39,8 +40,8 @@ public class BallScript : MonoBehaviour
 	{
 		GameScript.instance.ScoreUp (BallType);
 		transform.DOPause ();
-		GetComponent<SpriteRenderer> ().material.DOPause();
-		GetComponent<Rigidbody2D>().isKinematic=true;
+		GetComponent<SpriteRenderer> ().material.DOPause ();
+		GetComponent<Rigidbody2D> ().isKinematic = true;
 		Destroy (GetComponent<CircleCollider2D> (), 0.1f);
 		GetComponent<SpriteRenderer> ().material.DOFade (0, 1).OnComplete (
 			delegate() {
@@ -48,15 +49,6 @@ public class BallScript : MonoBehaviour
 			} 
 		);
 	}
-	// Use this for initialization
-	void Start ()
-	{
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		
-	}
+
+
 }
