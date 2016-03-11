@@ -17,7 +17,7 @@ public class GameScript : MonoBehaviour
 	public GameObject PrefabBall = null;
 	public GameObject MenuUI = null;
 	public Canvas CanvasUP = null;
-	private int GameDifficulty = 0;
+	private int GameDifficulty = 1;
 	static GameScript _instance;
 
 	public static GameScript instance {
@@ -57,7 +57,7 @@ public class GameScript : MonoBehaviour
 		Vector3 ObjPos = CurBall.transform.position;
 		Ball.GetComponent<SpriteRenderer> ().color = new Color (Random.Range (0f, 1f), Random.Range (0f, 1f), Random.Range (0f, 1f), 1);
 		Ball.transform.position = new Vector3 (Random.Range (-2f, 2f), 10, ObjPos.z);
-		Ball.GetComponent<Rigidbody2D> ().gravityScale = 0.5f;
+		Ball.GetComponent<Rigidbody2D> ().gravityScale = 0.2f+0.05f*GameDifficulty;
 		Ball.name = "Ball1";
 		Ball.GetComponent<BallScript>().BallType=1;
 		CurBall.GetComponent<BallScript> ().DestroyBall ();
@@ -89,7 +89,7 @@ public class GameScript : MonoBehaviour
 		Vector3 ObjPos = CurBall.transform.position;
 		Ball.GetComponent<SpriteRenderer> ().color = new Color (Random.Range (0f, 1f), Random.Range (0f, 1f), Random.Range (0f, 1f), 1);
 		Ball.transform.position = new Vector3 (Random.Range (-2f, 2f), 10, ObjPos.z);
-		Ball.GetComponent<Rigidbody2D> ().gravityScale = 0.5f;
+		Ball.GetComponent<Rigidbody2D> ().gravityScale = 0.2f+0.05f*GameDifficulty;
 		Ball.name = "Ball3";
 		Ball.GetComponent<BallScript>().BallType=1;
 		Ball.GetComponent<BallScript>().AlphaChangerAgain(0);
