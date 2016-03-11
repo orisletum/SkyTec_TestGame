@@ -57,7 +57,6 @@
      <Compile Include="Assets\Scripts\LabelScript.cs" />
      <Compile Include="Assets\Scripts\Localization.cs" />
      <Compile Include="Assets\Scripts\MApplication.cs" />
-     <Compile Include="Assets\Scripts\MPause.cs" />
      <Compile Include="Assets\Scripts\MPopup.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\Sound\MusicScript.cs" />
